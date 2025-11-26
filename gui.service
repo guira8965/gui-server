@@ -3,7 +3,7 @@ Description=gui-service
 
 [Service]
 Type=oneshot
-ExecStart=sudo /usr/local/bin/gui.sh
+ExecStart=sudo bash /usr/local/bin/gui.sh
 
 [Install]
 WantedBy=multi-user.target 
