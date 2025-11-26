@@ -1,7 +1,7 @@
 if [ "$EUID" -ne 0 ]; then
     echo "This script requires root privileges. Attempting to re-run with sudo..."
     exec sudo bash "$0" "$@"
-    exit $? # Exit if sudo fails
+    exit 1 # Exit if sudo fails
 fi
 
 echo "Script is running with root previleges."
