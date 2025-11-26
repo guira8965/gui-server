@@ -14,6 +14,8 @@ mv gui.sh /usr/local/bin
 echo "Moving gui.service to /etc/systemd/system/gui.service"
 mv gui.service /etc/systemd/system/gui.service
 
+echo "Reloading systemd."
+systemctl daemon-reload
 echo "Enabling and starting gui.service"
 systemctl enable --now gui.service
 
